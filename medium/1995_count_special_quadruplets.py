@@ -5,8 +5,8 @@ from typing import List
 class Solution:
     def countQuadruplets(self, nums: List[int]) -> int:
         ans = 0
-        for a, b, c, d in combinations(nums,4):
-            if a + b + c == d: 
+        for a, b, c, d in combinations(nums, 4):
+            if a + b + c == d:
                 ans += 1
         return ans
 

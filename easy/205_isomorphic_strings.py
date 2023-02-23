@@ -1,5 +1,20 @@
+"""
+Given two strings s and t, determine if they are isomorphic.
+
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+------------------
+time
+O(n)
+
+memory
+O(k+n)
+"""
+
+
 class Solution:
-    def isIsomorphic(self, s: str, t: str) -> bool:
+    def is_isomorphic(self, s: str, t: str) -> bool:
         d1 = {}
         d2 = {}
 
@@ -10,11 +25,9 @@ class Solution:
             elif d1.get(s[i]) != t[i] or d2.get(t[i]) != s[i]:
                 return False
 
-
-        return True 
-
+        return True
 
 
-print(Solution().isIsomorphic('egg', 'add'))
-print(Solution().isIsomorphic('paper', 'title'))
-print(Solution().isIsomorphic('foo', 'bar'))
+print(Solution().is_isomorphic("egg", "add"))
+print(Solution().is_isomorphic("paper", "title"))
+print(Solution().is_isomorphic("foo", "bar"))

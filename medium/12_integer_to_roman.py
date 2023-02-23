@@ -1,23 +1,23 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
         int_to_roman_dict = {
-            1000:'M',
-            900:'CM',
-            500:'D',
-            400:'CD',
-            100:'C',
-            90:'XC',
-            50:'L',
-            40:'XL',
-            10:'X',
-            9:'IX',
-            5:'V',
-            4:'IV',
-            1:'I'
+            1000: "M",
+            900: "CM",
+            500: "D",
+            400: "CD",
+            100: "C",
+            90: "XC",
+            50: "L",
+            40: "XL",
+            10: "X",
+            9: "IX",
+            5: "V",
+            4: "IV",
+            1: "I",
         }
 
-        result = ''
-        
+        result = ""
+
         while num != 0:
             for key, value in int_to_roman_dict.items():
                 repeat = num // key
@@ -33,9 +33,9 @@ class Solution:
 class Solution:
     def intToRoman(self, num: int) -> str:
         numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-        romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+        romans = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
 
-        result = ''
+        result = ""
         index = 0
 
         while num != 0:
@@ -44,7 +44,7 @@ class Solution:
                 if repeat > 0:
                     result += romans[i] * repeat
                     num = num - numbers[i] * repeat
-                    index = i+1
+                    index = i + 1
                     break
 
         return result

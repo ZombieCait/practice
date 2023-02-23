@@ -1,5 +1,17 @@
+"""
+Given the head of a singly linked list, return true if it is a 
+palindrome or false otherwise. 
+----------
+speed
+O(2n)
+
+memory
+O(n)
+"""
+
 from copy import copy
 from typing import Optional
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -18,18 +30,19 @@ class Solution:
 
         return reversed
 
-    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+    def is_palindrome(self, head: Optional[ListNode]) -> bool:
         reversed_head = self.reverse_linked_list(copy(head))
 
         while reversed_head:
             if reversed_head.val != head.val:
                 return False
-            
+
             reversed_head = reversed_head.next
             head = head.next
-            
+
         return True
+
 
 list_node = ListNode(1, ListNode(7, ListNode(7, ListNode(1))))
 
-print(Solution().isPalindrome(list_node))
+print(Solution().is_palindrome(list_node))

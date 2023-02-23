@@ -27,7 +27,8 @@ class Solution:
                 slow = slow.next
             else:
                 fast = fast.next
-        
+
         return head
+
 
 Solution().swapPairs(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))))

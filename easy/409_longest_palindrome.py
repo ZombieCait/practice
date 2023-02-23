@@ -1,4 +1,4 @@
-'''
+"""
 Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
 
 Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
@@ -9,13 +9,13 @@ O(n+k)
 
 memory
 O(1)
-'''
+"""
 
 from collections import Counter
 
 
 class Solution:
-    def longestPalindrome(self, s: str) -> int:
+    def longest_palindrome(self, s: str) -> int:
         letters_cnt = Counter(s)
 
         palindrom_lenght = 0
@@ -30,6 +30,7 @@ class Solution:
 
         return palindrom_lenght
 
-print(Solution().longestPalindrome('aaa'))
-print(Solution().longestPalindrome('AAaaab'))
-print(Solution().longestPalindrome('fgacdhwfwfsffff'))
+
+print(Solution().longest_palindrome("aaa"))
+print(Solution().longest_palindrome("AAaaab"))
+print(Solution().longest_palindrome("fgacdhwfwfsffff"))

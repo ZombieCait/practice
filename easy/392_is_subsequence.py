@@ -13,13 +13,14 @@ class Solution:
 
             if t[i] == s[j]:
                 j += 1
- 
-            i += 1  
+
+            i += 1
 
         if j == s_lenght:
-            return True      
+            return True
 
         return False
+
 
 print(Solution().isSubsequence("abc", "ahbgdc"))
 print(Solution().isSubsequence("", "ahbgdc"))

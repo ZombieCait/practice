@@ -6,7 +6,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-        
+
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         fast = slow = head
@@ -23,7 +23,10 @@ class Solution:
             slow = slow.next
 
         slow.next = slow.next.next
-        
+
         return head
 
-Solution().removeNthFromEnd(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 3)
+
+Solution().removeNthFromEnd(
+    ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))), 3
+)
