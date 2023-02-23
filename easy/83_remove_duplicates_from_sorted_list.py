@@ -19,7 +19,9 @@ class ListNode:
 
 
 class Solution:
-    def delete_duplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def delete_duplicates(
+        self, head: Optional[ListNode]
+    ) -> Optional[ListNode]:
         return_sorted = result = ListNode(-200)
         while head:
             if head.val == result.val:

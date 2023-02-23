@@ -23,7 +23,9 @@ class ListNode:
 
 
 class Solution:
-    def reverse_k_group(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    def reverse_k_group(
+        self, head: Optional[ListNode], k: int
+    ) -> Optional[ListNode]:
         result = jump = ListNode(0)
         result.next = left = right = head
 

@@ -19,5 +19,6 @@ class Solution:
                 longest_palindrome_start = left + 1
 
         return s[
-            longest_palindrome_start : longest_palindrome_start + longest_palindrome_len
+            longest_palindrome_start : longest_palindrome_start
+            + longest_palindrome_len
         ]

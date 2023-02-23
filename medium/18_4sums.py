@@ -13,7 +13,9 @@ class Solution:
 
                 while l < r:
                     if rest == nums[l] + nums[r]:
-                        quadruplet = sorted([nums[i], nums[j], nums[l], nums[r]])
+                        quadruplet = sorted(
+                            [nums[i], nums[j], nums[l], nums[r]]
+                        )
                         l += 1
                         r -= 1
                         if quadruplet not in quadruplets:

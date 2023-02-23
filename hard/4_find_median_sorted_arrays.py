@@ -2,7 +2,9 @@ from typing import List
 
 
 class Solution:
-    def find_median_sorted_arrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def find_median_sorted_arrays(
+        self, nums1: List[int], nums2: List[int]
+    ) -> float:
         sorted_nums = sorted(nums1 + nums2)
         middle = int(len(sorted_nums) / 2)
 
