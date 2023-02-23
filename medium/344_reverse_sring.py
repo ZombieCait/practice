@@ -15,4 +15,5 @@ class Solution:
             i += 1
             j -= 1
         print(s)
+        
 print(Solution().reverseString(['H', 'e', 'l', 'l', 'o']))
