@@ -17,17 +17,17 @@ O(1)
 class Solution:
     def my_sqrt(self, x: int) -> int:
 
-        l, r = 0, len(range(x))
+        left, right = 0, len(range(x))
 
-        while l < r:
-            m = (l + r + 1) // 2
+        while left < right:
+            middle = (eft + right + 1) // 2
 
-            if m * m <= x:
-                l = m
+            if middle * middle <= x:
+                eft = middle
             else:
-                r = m - 1
+                right = middle - 1
 
-        return l
+        return eft
 
 
 print(Solution().my_sqrt(9))

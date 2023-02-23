@@ -14,7 +14,7 @@ from typing import List
 
 
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generate_parenthesis(self, n: int) -> List[str]:
         result = []
 
         def get_paranthesis(s=[], l=0, r=0):
@@ -34,8 +34,8 @@ class Solution:
         return result
 
 
-print(Solution().generateParenthesis(0))
+print(Solution().generate_parenthesis(0))
 
-print(Solution().generateParenthesis(7))
+print(Solution().generate_parenthesis(7))
 
-print(Solution().generateParenthesis(3))
+print(Solution().generate_parenthesis(3))

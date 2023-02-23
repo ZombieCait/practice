@@ -1,6 +1,5 @@
-"""
-Дана строка AAAAAAFDDCCCCCCCAEEEEEEEEEEEEEEEEE, ее нужно преобразовать в 6A1F2D7C1A17E (RLE)
-"""
+"""Дана строка AAAAAAFDDCCCCCCCAEEEEEEEEEEEEEEEEE, ее нужно преобразовать в
+6A1F2D7C1A17E (RLE)"""
 
 
 def squeeze_str(s):
@@ -41,7 +40,7 @@ def get_introvert_seat(seats):
 
     for i in range(len(seats)):
         if seats[i] == 1:
-            if prev == None:
+            if prev is None:
                 res = i
             else:
                 res = max(res, (i - prev) // 2)

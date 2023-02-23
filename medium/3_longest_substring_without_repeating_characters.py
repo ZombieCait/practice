@@ -23,7 +23,7 @@ class Solution:
                 if len_max_str < len(current_str):
                     len_max_str = len(current_str)
 
-                current_str = current_str[current_str.find(s[i]) + 1 :] + s[i]
+                current_str = current_str[current_str.find(s[i]) + 1:] + s[i]
 
 
 print(Solution().length_of_longest_substring("addcb"))

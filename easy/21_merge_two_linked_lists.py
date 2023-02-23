@@ -22,7 +22,7 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(
+    def merge_two_lists(
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
@@ -46,4 +46,4 @@ class Solution:
 a = ListNode(1, ListNode(2, ListNode(4)))
 b = ListNode(1, ListNode(3, ListNode(5)))
 
-Solution().mergeTwoLists(a, b)
+Solution().merge_two_lists(a, b)

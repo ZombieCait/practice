@@ -15,15 +15,15 @@ from typing import List
 
 class Solution:
     def search_insert(self, nums: List[int], target: int) -> int:
-        l, r = 0, len(nums)
+        left, right = 0, len(nums)
 
-        while l < r:
-            m = (l + r) // 2
-            if nums[m] >= target:
-                r = m
+        while left < right:
+            middle = (left + right) // 2
+            if nums[middle] >= target:
+                right = middle
             else:
-                l = m + 1
-        return l
+                left = middle + 1
+        return left
 
 
 print(Solution().search_insert([1, 3, 5, 6], 7))

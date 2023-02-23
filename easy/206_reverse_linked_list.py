@@ -19,8 +19,6 @@ class ListNode:
 
 class Solution:
     def reverse_list(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        result = tmp = ListNode()
-
         while head:
             head.next = head.val
             head.val = head.next.val

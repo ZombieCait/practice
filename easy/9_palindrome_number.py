@@ -26,7 +26,7 @@ class Solution:
         return False
 
 
-class Solution:
+class Solution2:
     def is_palindrome(self, x: int) -> bool:
         if str(x) == str(x)[::-1]:
             return True

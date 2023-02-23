@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         closest_sum = 10**5
@@ -7,24 +10,24 @@ class Solution:
             if i > 0 and first == nums[i - 1]:
                 continue
 
-            l, r = i + 1, len(nums) - 1
+            left, right = i + 1, len(nums) - 1
 
-            while l < r:
-                triplet = [first, nums[l], nums[r]]
+            while left < right:
+                triplet = [first, nums[left], nums[right]]
                 res = sum(triplet)
                 if abs(target - closest_sum) > abs(target - res):
                     closest_sum = res
 
                 if res > target:
-                    r -= 1
+                    right -= 1
                 elif res < target:
-                    l += 1
+                    left += 1
                 else:
                     closest_sum = res
 
-                    while nums[l] == triplet[1] and l < r:
-                        l += 1
-                    while nums[r] == triplet[2] and l < r:
-                        r -= 1
+                    while nums[left] == triplet[1] and left < right:
+                        left += 1
+                    while nums[right] == triplet[2] and left < right:
+                        right -= 1
 
         return closest_sum
